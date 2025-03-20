@@ -1,12 +1,12 @@
 # Sistema-bancario
-# Variáveis globais
+## Variáveis globais
 saldo = 0.0
 extrato = []
 numero_saques = 0
 LIMITE_SAQUES = 3
 LIMITE_VALOR_SAQUE = 500.00
 
-#Função para depósito
+##Função para depósito
 def depositar (valor):
     global saldo, extrato
     if valor > 0:
@@ -16,7 +16,7 @@ def depositar (valor):
     else:
         print("Valor inválido para depósito. O valor deve ser positivo.")
 
-#Função para saque
+##Função para saque
 def sacar(valor):
     global saldo, extrato, numero_saques
     if valor > 0:
@@ -32,7 +32,7 @@ def sacar(valor):
             else:
                 print (f"O valor máximo por saque é de R$ {LIMITE_VALOR_SAQUE: .2f}.")
 
-#Função para exibir extrato
+##Função para exibir extrato
 def exibir_extrato ():
     global saldo, extrato
     print ("\n========== EXTRATO ==========")
@@ -44,7 +44,7 @@ def exibir_extrato ():
         print(f"\nSaldo atual: R$ {saldo:.2f}")
         print("=============================")
 
-#Menu principal
+##Menu principal
 def main():
     while True:
         print("\n========== MENU ==========")
@@ -68,6 +68,6 @@ def main():
         else:
             print("Opção invalida. Tente novamente.")
 
-#Executar o programa
+##Executar o programa
 if __name__ == "__main__":
     main ()
